@@ -1,0 +1,54 @@
+<div class="container">
+
+    <h2>Gestione Album</h2>
+
+    <div class="card">
+        <h4>Inserisci Nuovo Album</h4>
+
+        <input [(ngModel)]="newAlbum.title" placeholder="Titolo Album">
+
+        <input [(ngModel)]="newAlbum.year_release" placeholder="Anno Uscita">
+
+        <input [(ngModel)]="newAlbum.price" placeholder="Prezzo">
+
+        <select [(ngModel)]="newAlbum.artist_id">
+            <option value="">Seleziona Artista</option>
+            <option *ngFor="let a of artists" [value]="a.id">
+                {{a.name}} - {{a.genre}}
+            </option>
+        </select>
+
+        <button class="save" (click)="saveAlbum()">Salva Album</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Titolo</th>
+                <th>Anno</th>
+                <th>Prezzo</th>
+                <th>Artista Associato</th>
+                <th>Azione</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let a of albums">
+                <td>{{a.title}}</td>
+                <td>{{a.year_release}}</td>
+                <td>{{a.price}} €</td>
+                <td>{{a.artist_name}}</td>
+                <td>
+                    <button class="delete" (click)="removeAlbum(a.id)">
+                        Elimina
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="home">
+        <a routerLink="/">Home</a>
+    </div>
+
+</div>

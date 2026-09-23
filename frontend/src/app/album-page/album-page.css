@@ -1,0 +1,78 @@
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.card {
+    max-width: 500px;
+    margin: 0 auto 30px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+input,
+select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 6px 0;
+}
+
+button {
+    padding: 9px 16px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.save {
+    background: green;
+    color: white;
+    margin-top: 10px;
+}
+
+.delete {
+    background: #d33;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background: #222;
+    color: white;
+}
+
+.home {
+    margin-top: 25px;
+}
+
+.home a {
+    display: inline-block;
+    padding: 9px 16px;
+    background: #222;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.home a:hover {
+    background: #555;
+}
